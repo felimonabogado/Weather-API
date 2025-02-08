@@ -1,0 +1,36 @@
+body {
+    & :where(h1, h2, h3, h4, h5, h6){
+        font-family: "Open Sans", serif;
+    }
+
+    & :where(p, li, a, em, i){
+        font-family: "Roboto", serif;
+    }
+}
+
+.country {
+    display: inline-block;
+    background-color: lightblue;
+    padding: 20px 25px;
+    border-radius: 10px;
+
+    & .header {
+        display: grid;
+        column-gap: 10px;
+
+        & .weather-icon{
+            grid-area: 1 / 1 / 3 / 2;
+            height: 100%;
+        }
+    
+        & .name {
+            grid-area: 1 / 2 / 2 / 3;
+            margin: 0;
+        }
+    
+        & .description {
+            grid-area: 2 / 2 / 3 / 3;
+            margin: 0;
+        }
+    }
+}
